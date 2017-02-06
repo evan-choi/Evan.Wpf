@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace WPFExtension.Sample
 {
-    public class Model : DependencyObject
+    public class Model : DependencyObjectEx
     {
         public static readonly DependencyProperty TitleProperty =
             DependencyHelper.Register();
        
         public string Title
         {
-            get { return (string)GetValue(TitleProperty); }
+            get { return GetValue<string>(TitleProperty); }
             set { SetValue(TitleProperty, value); }
         }
     }
