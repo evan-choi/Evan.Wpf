@@ -7,11 +7,7 @@ namespace WPFExtension.Sample
     {
         public static readonly DependencyProperty TitleProperty =
             DependencyHelper.Register();
-
-        private static void TitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-        }
-
+       
         public string Title
         {
             get { return (string)GetValue(TitleProperty); }
