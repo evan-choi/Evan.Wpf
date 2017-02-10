@@ -3,6 +3,9 @@ WPF Extension
 
 A library help to WPF Programming
 
+# [Nuget](https://www.nuget.org/packages/WPFExtension/)
+PM> Install-Package WPFExtension
+
 # Basic usage
 
 **Using namespace**
