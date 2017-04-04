@@ -261,11 +261,42 @@ namespace WPFExtension
             descriptor.RemoveValueChanged(element, handler);
         }
 
-        public static bool IsSupportValueChangedEventg(this DependencyProperty property)
+        public static bool IsSupportValueChangedEvent(this DependencyProperty property)
         {
             var descriptor = DependencyPropertyDescriptor.FromProperty(property, property.OwnerType);
             return descriptor.SupportsChangeEvents;
         }
         #endregion
+
+        public static DependencyProperty GetDependencyProperty(this PropertyInfo pi)
+        {
+            string name = $"{pi.Name}Property";
+            
+            // DependencyProperty
+            var dpField = pi.DeclaringType.GetField(name);
+
+            if (dpField != null)
+                return dpField.GetValue(null) as DependencyProperty;
+
+            // DependencyPropertyKey (ReadOnly)
+            var dpKeyField = pi.DeclaringType.GetField($"{pi.Name}PropertyKey", BindingFlags.NonPublic | BindingFlags.Static);
+
+            if (dpKeyField != null)
+            {
+                var dpKey = dpKeyField.GetValue(null) as DependencyPropertyKey;
+
+                return dpKey.DependencyProperty;
+            }
+
+            return null;
+        }
+
+        public static DependencyProperty FindDependencyProperty(this DependencyObject obj, string propertyName)
+        {
+            return obj
+                .GetType()
+                .GetProperty(propertyName)?
+                .GetDependencyProperty();
+        }
     }
 }

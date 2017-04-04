@@ -2,11 +2,11 @@
 
 namespace WPFExtension
 {
-    public class DependencyObjectEx : DependencyObject
+    public static class DependencyObjectEx
     {
-        protected T GetValue<T>(DependencyProperty property)
+        public static T GetValue<T>(this DependencyObject obj, DependencyProperty property)
         {
-            return (T)base.GetValue(property);
+            return (T)obj.GetValue(property);
         }
     }
 }
