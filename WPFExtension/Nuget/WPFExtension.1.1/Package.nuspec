@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WPFExtension</id>
+    <version>1.1.0</version>
+    <authors>Steal</authors>
+    <owners>Steal</owners>
+    <licenseUrl>https://github.com/SteaI/WPFExtension</licenseUrl>
+    <projectUrl>https://github.com/SteaI/WPFExtension</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/SteaI/WPFExtension/master/Icons/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WPF Extension</description>
+    <releaseNotes>Add BindingHelper</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>WPF Dependency DependencyHelper DependencyProperty</tags>
+  </metadata>
+</package>
