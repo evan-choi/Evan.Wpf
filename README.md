@@ -3,6 +3,21 @@ WPF Extension
 
 A library help to WPF Programming
 
+# [Nuget](https://www.nuget.org/packages/WPFExtension/)
+PM> Install-Package WPFExtension
+
+# Support Register Methods
+| Methods                         | Need Property |
+| ------------------------------- |:-------------:|
+| Register()                      | YES           |
+| Register\<T\>()                 | NO            |
+| RegisterReadOnly()              | YES           |
+| RegisterReadOnly\<T\>()         | NO            |
+| RegisterAttached()              | YES           |
+| RegisterAttached\<T\>()         | NO            |
+| RegisterAttachedReadOnly()      | YES           |
+| RegisterAttachedReadOnly\<T\>() | NO            |
+
 # Basic usage
 
 **Using namespace**
