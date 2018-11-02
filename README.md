@@ -24,7 +24,7 @@ PM> Install-Package WPFExtension
 ```cs
 using WPFExtension;
 ```
-<br />
+
 ## DependencyHelper
 **Basic Register**
 ```cs
@@ -38,7 +38,7 @@ public string Text
     set { SetValue(TextProperty, value); }
 }
 ```
-<br />
+
 **Basic Register - Exception Sample**
 ```cs
 // Throw DependencyHelperException
@@ -51,7 +51,7 @@ public string Title
     set { SetValue(TextProperty, value); }
 }
 ```
-<br />
+
 **Register only**
 ```cs
 // Register Only Dependency Property
@@ -60,7 +60,7 @@ public static DependencyProperty TextProperty =
         
 // It is not necessary string property.
 ```
-<br />
+
 **Add Value Changed from DependencyPropertyDescriptor**
 ```cs
 // Add Event
