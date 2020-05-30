@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WPFExtension\WPFExtension.csproj">
-      <Project>{5294f9f8-821f-47f0-8cdf-0e5bc9adafd9}</Project>
+      <Project>{c977e7fd-770f-4a85-8998-4d1e86821d8f}</Project>
       <Name>WPFExtension</Name>
     </ProjectReference>
   </ItemGroup>
