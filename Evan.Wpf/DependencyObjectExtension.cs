@@ -2,7 +2,7 @@
 
 namespace Evan.Wpf
 {
-    public static class DependencyObjectEx
+    public static class DependencyObjectExtension
     {
         public static T GetValue<T>(this DependencyObject obj, DependencyProperty property)
         {

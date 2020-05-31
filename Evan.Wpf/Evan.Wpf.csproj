@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
     <PropertyGroup>
-        <TargetFrameworks>net45;net40;net35;netcoreapp3.1;netcoreapp3</TargetFrameworks>
+        <TargetFrameworks>net45;net40;netcoreapp3.1;netcoreapp3</TargetFrameworks>
         <UseWPF>true</UseWPF>
         <LangVersion>8.0</LangVersion>
+        <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <PropertyGroup Label="Nuspec">
@@ -20,11 +21,6 @@
     <ItemGroup>
         <None Include="Resources\Logo.png" Pack="true" />
     </ItemGroup>
-
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net35'">
-        <AssemblyTitle>Evan.Wpf .NET 3.5</AssemblyTitle>
-        <DefineConstants>NETFX;NETFX_3_5;$(AdditionalConstants)</DefineConstants>
-    </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net40'">
         <AssemblyTitle>Evan.Wpf .NET 4.0</AssemblyTitle>
