@@ -1,10 +1,12 @@
-# WPF Extension
+# Evan.Wpf
 WPF Extension
 
 A library help to WPF Programming
 
-# [Nuget](https://www.nuget.org/packages/WPFExtension/)
-PM> Install-Package WPFExtension
+# [Nuget](https://www.nuget.org/packages/Evan.Wpf/)
+``` sh
+Install-Package Evan.Wpf
+```
 
 # Support Register Methods
 | Methods                         | Need Property |
@@ -22,7 +24,7 @@ PM> Install-Package WPFExtension
 
 **Using namespace**
 ```cs
-using WPFExtension;
+using Evan.Wpf;
 ```
 
 ## DependencyHelper
