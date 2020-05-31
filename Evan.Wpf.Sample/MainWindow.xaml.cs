@@ -1,8 +1,8 @@
-﻿using WPFExtension;
+﻿using Evan.Wpf;
 using System.Windows;
 using System;
 
-namespace WPFExtension.Sample
+namespace Evan.Wpf.Sample
 {
     public partial class MainWindow : Window
     {
@@ -18,17 +18,6 @@ namespace WPFExtension.Sample
             this.DataContext = model;
 
             Model.TitleProperty.AddValueChanged(model, TitlePropertyChanged);
-
-            this.Text = "A piece of text";
-        }
-
-
-        public static DependencyProperty TextProperty = DependencyHelper.Register();
-
-        public string Text
-        {
-            get { return (string)GetValue(TextProperty); }
-            set { SetValue(TextProperty, value); }
         }
 
         private void TitlePropertyChanged(object sender, EventArgs e)

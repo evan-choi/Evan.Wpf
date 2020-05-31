@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WPFExtension
+namespace Evan.Wpf
 {
     public static class DependencyObjectEx
     {

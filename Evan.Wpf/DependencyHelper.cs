@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 
-namespace WPFExtension
+namespace Evan.Wpf
 {
     public class DependencyHelperException : Exception
     {

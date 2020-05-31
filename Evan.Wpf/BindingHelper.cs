@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Data;
 
-namespace WPFExtension
+namespace Evan.Wpf
 {
     public static class BindingHelper
     {
@@ -37,7 +37,7 @@ namespace WPFExtension
             IValueConverter converter = null,
             object fallbackValue = null)
         {
-            return BindingHelper.SetBinding(
+            return SetBinding(
                 source, sourceProperty.Name,
                 target, targetProperty,
                 mode,
@@ -64,7 +64,7 @@ namespace WPFExtension
                     source.SetValue(sourceProperty, target.GetValue(targetProperty));
                 }
 
-                return BindingHelper.SetBinding(
+                return SetBinding(
                     source, sourceProperty,
                     target, targetProperty,
                     mode, sourceTrigger, converter, fallbackValue);
@@ -85,7 +85,7 @@ namespace WPFExtension
 
             if (targetProperty != null)
             {
-                return BindingHelper.SetBinding(
+                return SetBinding(
                     source, sourceProperty,
                     target, targetProperty,
                     mode, sourceTrigger, converter, fallbackValue);

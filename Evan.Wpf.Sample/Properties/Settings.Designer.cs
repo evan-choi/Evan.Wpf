@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPFExtension.Sample.Properties
+namespace Evan.Wpf.Sample.Properties
 {
 
 

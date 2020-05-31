@@ -7,8 +7,8 @@
     <ProjectGuid>{91847002-42C4-4D3D-B41D-C9273414B7CC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WPFExtension.Sample</RootNamespace>
-    <AssemblyName>WPFExtension.Sample</AssemblyName>
+    <RootNamespace>Evan.Wpf.Sample</RootNamespace>
+    <AssemblyName>Evan.Wpf.Sample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -96,9 +96,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WPFExtension\WPFExtension.csproj">
+    <ProjectReference Include="..\Evan.Wpf\Evan.Wpf.csproj">
       <Project>{c977e7fd-770f-4a85-8998-4d1e86821d8f}</Project>
-      <Name>WPFExtension</Name>
+      <Name>Evan.Wpf</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

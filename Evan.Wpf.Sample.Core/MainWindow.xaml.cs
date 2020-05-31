@@ -1,10 +1,9 @@
-﻿using WPFExtension;
-using System.Windows;
+﻿using System.Windows;
 using System;
 
-namespace WPFExtension.Sample
+namespace Evan.Wpf.Sample.Core
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
@@ -15,9 +14,19 @@ namespace WPFExtension.Sample
                 Title = "Hello Depedency Helper!"
             };
 
-            this.DataContext = model;
+            DataContext = model;
 
             Model.TitleProperty.AddValueChanged(model, TitlePropertyChanged);
+
+            Text = "A piece of text";
+        }
+
+        public static readonly DependencyProperty TextProperty = DependencyHelper.Register();
+
+        public string Text
+        {
+            get => (string)GetValue(TextProperty);
+            set => SetValue(TextProperty, value);
         }
 
         private void TitlePropertyChanged(object sender, EventArgs e)
