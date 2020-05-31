@@ -1,8 +1,48 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net45</TargetFrameworks>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net45;net40;net35;netcoreapp3.1;netcoreapp3</TargetFrameworks>
+        <UseWPF>true</UseWPF>
+        <LangVersion>8.0</LangVersion>
+    </PropertyGroup>
 
+    <PropertyGroup Label="Nuspec">
+        <PackageVersion>1.2.0</PackageVersion>
+        <Authors>Evan</Authors>
+        <Copyright>Copyright (C) Evan. All rights reserved.</Copyright>
+        <PackageProjectUrl>https://github.com/evan-choi/Evan.Wpf</PackageProjectUrl>
+        <PackageIcon>content\Resources\Logo.png</PackageIcon>
+        <RepositoryUrl>https://github.com/evan-choi/Evan.Wpf</RepositoryUrl>
+        <PackageTags>WPF, Dependency, DependencyHelper, DependencyProperty</PackageTags>
+        <PackageReleaseNotes>Support framework target .NET Core</PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="Resources\Logo.png" Pack="true" />
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net35'">
+        <AssemblyTitle>Evan.Wpf .NET 3.5</AssemblyTitle>
+        <DefineConstants>NETFX;NETFX_3_5;$(AdditionalConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net40'">
+        <AssemblyTitle>Evan.Wpf .NET 4.0</AssemblyTitle>
+        <DefineConstants>NETFX;NETFX_4_0;$(AdditionalConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net45'">
+        <AssemblyTitle>Evan.Wpf .NET 4.5</AssemblyTitle>
+        <DefineConstants>NETFX;NETFX_4_5;CALLER_MEMBER_NAME;$(AdditionalConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3'">
+        <AssemblyTitle>Evan.Wpf .NET Core 3.0</AssemblyTitle>
+        <DefineConstants>NETCOREAPP;NETCOREAPP_3_0;CALLER_MEMBER_NAME;$(AdditionalConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+        <AssemblyTitle>Evan.Wpf .NET Core 3.1</AssemblyTitle>
+        <DefineConstants>NETCOREAPP;NETCOREAPP_3_1;CALLER_MEMBER_NAME;$(AdditionalConstants)</DefineConstants>
+    </PropertyGroup>
 </Project>
